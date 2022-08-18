@@ -5,6 +5,14 @@ terraform {
       version = "~> 3.0"
     }
   }
+  cloud {
+  organization = "alain_basabe o como lo hayas llamado"
+  hostname     = "app.terraform.io" # Optional; defaults to app.terraform.io
+  workspaces {
+    name = "como lo quieras llamar"
+  }
+  }
+   required_version = ">= 1.1.6"
 }
 provider "aws" {
   region     = var.aws_region
